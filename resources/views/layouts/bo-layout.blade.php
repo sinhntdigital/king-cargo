@@ -21,6 +21,7 @@
     <link href="{{ asset('backend/jquery-ui.bundle.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('plugins/fancybox/jquery.fancybox.css') }}" rel="stylesheet" type="text/css"/>
     <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
 
     <style>
         .gm-css__div-image--responsive {
@@ -166,6 +167,19 @@
                             <span class="m-menu__link-title">
                                 <span class="m-menu__link-wrap">
                                     <span class="m-menu__link-text">{{ __('Dashboard') }}</span>
+                                </span>
+                            </span>
+                        </a>
+
+                       
+                    </li>
+
+                    <li class="m-menu__item" aria-haspopup="true">
+                        <a href="/" class="m-menu__link">
+                            <i class="m-menu__link-icon fas fa-user"></i>
+                            <span class="m-menu__link-title">
+                                <span class="m-menu__link-wrap">
+                                    <span class="m-menu__link-text">user management</span>
                                 </span>
                             </span>
                         </a>

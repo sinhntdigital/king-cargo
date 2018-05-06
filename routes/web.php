@@ -27,3 +27,9 @@ Route::post('register', 'GauMapAuthController@postRegister')->name('gmPostRegist
 Route::group([], function () {
     Route::get('/', 'HomeController@getDashboardPage')->name('gmGetDashboardPage');
 });
+
+
+// management admin
+Route::group([], function () {
+    Route::resource('user', 'UserController');
+});

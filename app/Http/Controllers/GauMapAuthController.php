@@ -48,7 +48,7 @@ class GauMapAuthController extends Controller {
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function getLogin () {
+    public static function getLogin () {
         try {
             if (\Auth::check())
                 return redirect()->to('/');
