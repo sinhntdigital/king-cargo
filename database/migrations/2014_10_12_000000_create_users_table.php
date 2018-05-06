@@ -11,13 +11,13 @@ class CreateUsersTable extends Migration {
      */
     public function up () {
         Schema::create('users', function (Blueprint $table) {
-            $table->string('id', 65)->index();
-            $table->string('resource_id', 65)->index();
+            $table->string('id', 65)->default(1)->index();
+            $table->string('resource_id', 65)->default(1)->index();
             $table->string('name', 65)->unique();
             $table->string('email', 65)->unique();
             $table->string('password', 500);
             $table->dateTime('last_login')->nullable();
-            $table->tinyInteger('role')->default(0); // 9 is admin, 0 is member
+            $table->string('role'); // 9 is admin, 0 is member
             $table->enum('status', ['enable', 'disable', 'banned'])->default('disable');
             $table->rememberToken();
             $table->timestamps();

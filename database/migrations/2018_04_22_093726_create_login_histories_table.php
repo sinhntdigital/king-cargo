@@ -15,13 +15,13 @@ class CreateLoginHistoriesTable extends Migration
     {
         Schema::create('login_histories', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('user_id', 65)->index();
-            $table->string('ip', 25)->nullable();
-            $table->string('device', 50)->nullable();
-            $table->string('browser', 255)->nullable();
-            $table->timestamps();
-            $table->foreign('user_id')->references('id')->on('users')
-                  ->onUpdate('cascade')->onDelete('cascade');
+            // $table->string('user_id', 65)->index();
+            // $table->string('ip', 25)->nullable();
+            // $table->string('device', 50)->nullable();
+            // $table->string('browser', 255)->nullable();
+            // $table->timestamps();
+            // $table->foreign('user_id')->references('id')->on('users')
+            //       ->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
