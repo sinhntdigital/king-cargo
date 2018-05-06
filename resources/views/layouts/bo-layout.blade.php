@@ -127,14 +127,14 @@
                                                 <div class="m-dropdown__content">
                                                     <ul class="m-nav m-nav--skin-light">
                                                         {{--<li class="m-nav__item">--}}
-                                                            {{--<a href="{{ route('gmGetViewProfile') }}" class="m-nav__link">--}}
-                                                                {{--<i class="m-nav__link-icon flaticon-profile"></i> <span class="m-nav__link-text">{{ __('Account Settings') }}</span>--}}
-                                                            {{--</a>--}}
+                                                        {{--<a href="{{ route('gmGetViewProfile') }}" class="m-nav__link">--}}
+                                                        {{--<i class="m-nav__link-icon flaticon-profile"></i> <span class="m-nav__link-text">{{ __('Account Settings') }}</span>--}}
+                                                        {{--</a>--}}
                                                         {{--</li>--}}
                                                         {{--<li class="m-nav__item">--}}
-                                                            {{--<a href="{{ route('gmGetChangePassword') }}" class="m-nav__link">--}}
-                                                                {{--<i class="m-nav__link-icon flaticon-share"></i> <span class="m-nav__link-text">{{ __('Change password') }}</span>--}}
-                                                            {{--</a>--}}
+                                                        {{--<a href="{{ route('gmGetChangePassword') }}" class="m-nav__link">--}}
+                                                        {{--<i class="m-nav__link-icon flaticon-share"></i> <span class="m-nav__link-text">{{ __('Change password') }}</span>--}}
+                                                        {{--</a>--}}
                                                         {{--</li>--}}
                                                         <li class="m-nav__item">
                                                             <a href="{{ route('gmGetLogout') }}" class="m-nav__link">
@@ -170,10 +170,17 @@
                                 </span>
                             </span>
                         </a>
-
-                       
                     </li>
-
+                    <li class="m-menu__item" aria-haspopup="true">
+                        <a href="{{ route('resource.index') }}" class="m-menu__link">
+                            <i class="m-menu__link-icon flaticon-squares-4"></i>
+                            <span class="m-menu__link-title">
+                                <span class="m-menu__link-wrap">
+                                    <span class="m-menu__link-text">Resource</span>
+                                </span>
+                            </span>
+                        </a>
+                    </li>
                     <li class="m-menu__item" aria-haspopup="true">
                         <a href="/" class="m-menu__link">
                             <i class="m-menu__link-icon fas fa-user"></i>
@@ -185,32 +192,32 @@
                         </a>
                     </li>
                     {{--<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true">--}}
-                        {{--<a href="javascript:;" class="m-menu__link m-menu__toggle">--}}
-                            {{--<i class="m-menu__link-icon flaticon-user-settings"></i>--}}
-                            {{--<span class="m-menu__link-title">--}}
-                                {{--<span class="m-menu__link-wrap">--}}
-                                    {{--<span class="m-menu__link-text">{{ __('Settings') }}</span>--}}
-                                {{--</span>--}}
-                            {{--</span>--}}
-                            {{--<i class="m-menu__ver-arrow la la-angle-right"></i>--}}
-                        {{--</a>--}}
-                        {{--<div class="m-menu__submenu">--}}
-                            {{--<span class="m-menu__arrow"></span>--}}
-                            {{--<ul class="m-menu__subnav">--}}
-                                {{--<li class="m-menu__item  m-menu__item--active" aria-haspopup="true">--}}
-                                    {{--<a href="{{ route('gmGetViewProfile') }}" class="m-menu__link ">--}}
-                                        {{--<i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i>--}}
-                                        {{--<span class="m-menu__link-text">{{ __('Profile') }}</span>--}}
-                                    {{--</a>--}}
-                                {{--</li>--}}
-                                {{--<li class="m-menu__item  m-menu__item--active" aria-haspopup="true">--}}
-                                    {{--<a href="{{ route('gmGetChangePassword') }}" class="m-menu__link ">--}}
-                                        {{--<i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i>--}}
-                                        {{--<span class="m-menu__link-text">{{ __('Change password') }}</span>--}}
-                                    {{--</a>--}}
-                                {{--</li>--}}
-                            {{--</ul>--}}
-                        {{--</div>--}}
+                    {{--<a href="javascript:;" class="m-menu__link m-menu__toggle">--}}
+                    {{--<i class="m-menu__link-icon flaticon-user-settings"></i>--}}
+                    {{--<span class="m-menu__link-title">--}}
+                    {{--<span class="m-menu__link-wrap">--}}
+                    {{--<span class="m-menu__link-text">{{ __('Settings') }}</span>--}}
+                    {{--</span>--}}
+                    {{--</span>--}}
+                    {{--<i class="m-menu__ver-arrow la la-angle-right"></i>--}}
+                    {{--</a>--}}
+                    {{--<div class="m-menu__submenu">--}}
+                    {{--<span class="m-menu__arrow"></span>--}}
+                    {{--<ul class="m-menu__subnav">--}}
+                    {{--<li class="m-menu__item  m-menu__item--active" aria-haspopup="true">--}}
+                    {{--<a href="{{ route('gmGetViewProfile') }}" class="m-menu__link ">--}}
+                    {{--<i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i>--}}
+                    {{--<span class="m-menu__link-text">{{ __('Profile') }}</span>--}}
+                    {{--</a>--}}
+                    {{--</li>--}}
+                    {{--<li class="m-menu__item  m-menu__item--active" aria-haspopup="true">--}}
+                    {{--<a href="{{ route('gmGetChangePassword') }}" class="m-menu__link ">--}}
+                    {{--<i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i>--}}
+                    {{--<span class="m-menu__link-text">{{ __('Change password') }}</span>--}}
+                    {{--</a>--}}
+                    {{--</li>--}}
+                    {{--</ul>--}}
+                    {{--</div>--}}
                     {{--</li>--}}
                 </ul>
             </div>

@@ -12,18 +12,29 @@ class CreateResourcesTable extends Migration {
     public function up () {
         Schema::create('resources', function (Blueprint $table) {
             $table->string('id', 65)->index();
-            $table->enum('type', ['personal', 'company'])->default('personal');
+            $table->enum('type', [
+                'personal',
+                'company',
+            ])->default('personal');
             $table->string('full_name', 255)->nullable();
             $table->string('representative', 255)->nullable(); // Người đại diện
             $table->dateTime('birthday')->nullable();
             $table->string('address', 255)->nullable();
             $table->string('country_id', 255)->nullable();
             $table->string('phone_number', 25)->nullable();
-            $table->enum('status', ['enable', 'disable'])->default('enable');
-            $table->string('creator_id', 65)->index();
+            $table->enum('status', [
+                'enable',
+                'disable',
+            ])->default('enable');
+            $table->string('creator_id', 65)->nullable();
             $table->timestamps();
             $table->primary('id');
         });
+
+        \Db::table('resources')->insert([
+                                            'id'        => \Helpers::generateId(),
+                                            'full_name' => 'Gấu Mập',
+                                        ]);
     }
 
     /**

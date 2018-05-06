@@ -31,5 +31,6 @@ Route::group([], function () {
 
 // management admin
 Route::group([], function () {
+    Route::resource('resource', 'ResourcesController');
     Route::resource('user', 'UserController');
 });

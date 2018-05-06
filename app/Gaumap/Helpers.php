@@ -1,5 +1,5 @@
 <?php
-	namespace App\Gaumap;
+
 	use Carbon\Carbon;
 	
 	/**
