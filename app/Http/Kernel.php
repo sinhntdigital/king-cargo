@@ -3,6 +3,7 @@
 namespace App\Http;
 
 use App\Http\Middleware\AdminCheckMiddleware;
+use App\Http\Middleware\GetlocaleMiddleware;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel {
@@ -46,6 +47,7 @@ class Kernel extends HttpKernel {
      * @var array
      */
     protected $routeMiddleware = [
+        'get-locale'    => GetlocaleMiddleware::class,
         'admin'         => AdminCheckMiddleware::class,
         'auth'          => \Illuminate\Auth\Middleware\Authenticate::class,
         'auth.basic'    => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,

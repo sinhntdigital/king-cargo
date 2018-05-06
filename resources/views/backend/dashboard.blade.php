@@ -3,7 +3,7 @@
 @section('page_title', 'Dashboard')
 
 @section('content')
-
+    {{ trans('auth.failed') }}
 @endsection
 
 @section('scripts')

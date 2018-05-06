@@ -24,13 +24,12 @@ Route::post('login', 'GauMapAuthController@postLogin')->name('gmPostLogin');
 Route::post('lost-password', 'GauMapAuthController@postLostPassword')->name('gmPostLostPassword');
 Route::post('register', 'GauMapAuthController@postRegister')->name('gmPostRegister');
 
-Route::group([], function () {
+Route::middleware(['get-locale'])->group(function () {
     Route::get('/', 'HomeController@getDashboardPage')->name('gmGetDashboardPage');
-});
-
-
-// management admin
-Route::group([], function () {
     Route::resource('resource', 'ResourcesController');
     Route::resource('user', 'UserController');
 });
+
+Route::get('change-language/{locale}', function ($locale) {
+    return redirect('/')->withCookie(cookie('app_locale', $locale, 1440));
+})->name('changeLanguage');

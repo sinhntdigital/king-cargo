@@ -113,7 +113,7 @@
                                             <div class="m-dropdown__header m--align-center" style="background: url('{{ asset('/backend/img/misc/user_profile_bg.jpg') }}') 0% 0% / cover;">
                                                 <div class="m-card-user m-card-user--skin-dark">
                                                     <div class="m-card-user__pic">
-                                                        {{--<img src="{{ asset('backend/img/users/user-none.jpg') }}" alt="" class="m--img-rounded m--marginless">--}}
+                                                        <img src="{{ asset('backend/img/users/user-none.jpg') }}" alt="" class="m--img-rounded m--marginless">
                                                     </div>
                                                     <div class="m-card-user__details">
                                                         <span class="m-card-user__name m--font-weight-500">Admin</span>
@@ -187,6 +187,36 @@
                             <span class="m-menu__link-title">
                                 <span class="m-menu__link-wrap">
                                     <span class="m-menu__link-text">user management</span>
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="m-menu__item" aria-haspopup="true">
+                        <a href="{{ route('changeLanguage', 'en') }}" class="m-menu__link">
+                            <i class="m-menu__link-icon fas fa-user"></i>
+                            <span class="m-menu__link-title">
+                                <span class="m-menu__link-wrap">
+                                    <span class="m-menu__link-text">EN</span>
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="m-menu__item" aria-haspopup="true">
+                        <a href="{{ route('changeLanguage', 'vi') }}" class="m-menu__link">
+                            <i class="m-menu__link-icon fas fa-user"></i>
+                            <span class="m-menu__link-title">
+                                <span class="m-menu__link-wrap">
+                                    <span class="m-menu__link-text">VI</span>
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="m-menu__item" aria-haspopup="true">
+                        <a href="{{ route('changeLanguage', 'jp') }}" class="m-menu__link">
+                            <i class="m-menu__link-icon fas fa-user"></i>
+                            <span class="m-menu__link-title">
+                                <span class="m-menu__link-wrap">
+                                    <span class="m-menu__link-text">JP</span>
                                 </span>
                             </span>
                         </a>
