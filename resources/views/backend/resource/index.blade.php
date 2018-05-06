@@ -1,6 +1,6 @@
 @extends('layouts.bo-layout')
 
-@section('page_title', 'List all users')
+@section('page_title', 'Resource management')
 
 @section('content')
     <div class="m-portlet m-portlet--brand m-portlet--head-solid-bg m-portlet--head-sm">
@@ -10,7 +10,7 @@
                     <span class="m-portlet__head-icon">
                         <i class="flaticon-list"></i>
                     </span>
-                    <h3 class="m-portlet__head-text">{{ __('List all users') }}</h3>
+                    <h3 class="m-portlet__head-text">{{ __('List all resources') }}</h3>
                 </div>
             </div>
         </div>
@@ -68,37 +68,7 @@
 @section('scripts')
     <script type="text/javascript">
         $('#gm-table--investment_packages').mDatatable({
-            data   : {
-                saveState: {
-                    cookie: !1,
-                },
-            },
-            columns: [
-                {
-                    field    : 'No',
-                    type     : 'number',
-                    width    : 40,
-                    textAlign: 'center',
-                }, {
-                    field    : 'Phone',
-                    width    : 120,
-                    textAlign: 'right',
-                }, {
-                    field    : 'Ballance',
-                    width    : 80,
-                    textAlign: 'right',
-                }, {
-                    field    : 'Created at',
-                    type     : 'date',
-                    width    : 80,
-                    format   : 'DD/MM/YYYY HH:mm',
-                    textAlign: 'right',
-                }, {
-                    field    : '#',
-                    textAlign: 'center',
-                    width    : 80,
-                },
-            ],
+
         });
     </script>
 @stop
