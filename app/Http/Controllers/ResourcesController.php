@@ -6,11 +6,25 @@ use App\Models\Resource;
 use Illuminate\Http\Request;
 
 class ResourcesController extends Controller {
+
     /**
      * Display a listing of the resource.
-     * @return \Illuminate\Http\Response
+     *
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\JsonResponse|\Illuminate\View\View
      */
-    public function index () {
+    public function index (Request $request) {
+        try {
+            if ($request->wantsJson()) {
+                $resources = Resource::orderBy('created_at', 'DESC')->get();
+                return response()->json(['data' => $resources], 200);
+            } else {
+                return view('backend.resource.index');
+            }
+        } catch (\Exception $ex) {
+            if ($request->wantsJson()) return response()->json(['error' => $ex->getMessage()], 200);
+            else abort(500);
+        }
     }
 
     /**

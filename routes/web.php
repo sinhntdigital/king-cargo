@@ -26,7 +26,7 @@ Route::post('register', 'GauMapAuthController@postRegister')->name('gmPostRegist
 
 Route::middleware(['get-locale'])->group(function () {
     Route::get('/', 'HomeController@getDashboardPage')->name('gmGetDashboardPage');
-    Route::resource('resource', 'ResourcesController');
+    Route::resource('employee', 'EmployeesController');
     Route::resource('user', 'UserController');
 });
 

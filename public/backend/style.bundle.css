@@ -17,7 +17,7 @@ html {font-family: sans-serif;line-height: 1.15;-webkit-text-size-adjust: 100%;-
 
 article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {display: block}
 
-body {margin: 0;font-family: Poppins;font-size: 1rem;font-weight: 400;line-height: 1.5;color: #212529;text-align: left;background-color: #FFFFFF}
+body {margin: 0;font-family: Roboto;font-size: 1rem;font-weight: 400;line-height: 1.5;color: #212529;text-align: left;background-color: #FFFFFF}
 
 [tabindex="-1"]:focus {outline: 0 !important}
 
@@ -1946,7 +1946,7 @@ button.close {padding: 0;background-color: transparent;border: 0;-webkit-appeara
 	.modal-lg {max-width: 800px}
 }
 
-.tooltip {position: absolute;z-index: 1070;display: block;margin: 0;font-family: Poppins;font-style: normal;font-weight: 400;line-height: 1.5;text-align: left;text-align: start;text-decoration: none;text-shadow: none;text-transform: none;letter-spacing: normal;word-break: normal;word-spacing: normal;white-space: normal;line-break: auto;font-size: .875rem;word-wrap: break-word;opacity: 0}
+.tooltip {position: absolute;z-index: 1070;display: block;margin: 0;font-family: Roboto;font-style: normal;font-weight: 400;line-height: 1.5;text-align: left;text-align: start;text-decoration: none;text-shadow: none;text-transform: none;letter-spacing: normal;word-break: normal;word-spacing: normal;white-space: normal;line-break: auto;font-size: .875rem;word-wrap: break-word;opacity: 0}
 
 .tooltip.show {opacity: .9}
 
@@ -1980,7 +1980,7 @@ button.close {padding: 0;background-color: transparent;border: 0;-webkit-appeara
 
 .tooltip-inner {max-width: 200px;padding: .25rem .5rem;color: #FFFFFF;text-align: center;background-color: #000000;border-radius: .25rem}
 
-.popover {position: absolute;top: 0;left: 0;z-index: 1060;display: block;max-width: 276px;font-family: Poppins;font-style: normal;font-weight: 400;line-height: 1.5;text-align: left;text-align: start;text-decoration: none;text-shadow: none;text-transform: none;letter-spacing: normal;word-break: normal;word-spacing: normal;white-space: normal;line-break: auto;font-size: .875rem;word-wrap: break-word;background-color: #FFFFFF;background-clip: padding-box;border: 1px solid rgba(0, 0, 0, .2);border-radius: .3rem}
+.popover {position: absolute;top: 0;left: 0;z-index: 1060;display: block;max-width: 276px;font-family: Roboto;font-style: normal;font-weight: 400;line-height: 1.5;text-align: left;text-align: start;text-decoration: none;text-shadow: none;text-transform: none;letter-spacing: normal;word-break: normal;word-spacing: normal;white-space: normal;line-break: auto;font-size: .875rem;word-wrap: break-word;background-color: #FFFFFF;background-clip: padding-box;border: 1px solid rgba(0, 0, 0, .2);border-radius: .3rem}
 
 .popover .arrow {position: absolute;display: block;width: 1rem;height: .5rem;margin: 0 .3rem}
 
@@ -4357,7 +4357,7 @@ a.text-dark:focus, a.text-dark:hover {color: #1D2124 !important}
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {font-family: sans-serif;text-size-adjust: 100%;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;-webkit-tap-highlight-color: transparent}
 
-body, html {height: 100%;margin: 0;padding: 0;font-size: 14px;font-weight: 300;font-family: Poppins;-ms-text-size-adjust: 100%;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale}
+body, html {height: 100%;margin: 0;padding: 0;font-size: 14px;font-weight: 300;font-family: Roboto;-ms-text-size-adjust: 100%;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale}
 
 body a:active, body a:focus, html a:active, html a:focus {text-decoration: none !important}
 
@@ -7331,7 +7331,7 @@ code {padding: .2rem .4rem}
 
 code {background: #EBEDF2}
 
-.btn {font-family: Poppins;-webkit-box-shadow: none !important;-moz-box-shadow: none !important;box-shadow: none !important;cursor: pointer}
+.btn {font-family: Roboto;-webkit-box-shadow: none !important;-moz-box-shadow: none !important;box-shadow: none !important;cursor: pointer}
 
 .btn > i {line-height: 0;vertical-align: middle}
 
@@ -7351,7 +7351,7 @@ code {background: #EBEDF2}
 
 .btn-group-lg > .btn.m-btn--wide, .btn.m-btn--wide.btn-lg {padding-left: 3rem;padding-right: 3rem}
 
-.btn.m-btn--custom {padding: .75rem 2rem;font-size: 1rem;font-weight: 400;font-family: Poppins}
+.btn.m-btn--custom {padding: .75rem 2rem;font-size: 1rem;font-weight: 400;font-family: Roboto}
 
 .btn-group-sm > .btn.m-btn--custom, .btn.m-btn--custom.btn-sm {padding: .5rem 1rem;font-size: .9rem}
 
@@ -8965,7 +8965,7 @@ code {background: #EBEDF2}
 
 .m-portlet.m-portlet--creative .m-portlet__head .m-portlet__head-caption .m-portlet__head-title .m-portlet__head-icon [class*=" flaticon-"], .m-portlet.m-portlet--creative .m-portlet__head .m-portlet__head-caption .m-portlet__head-title .m-portlet__head-icon [class^=flaticon-] {font-size: 1.4rem}
 
-.m-portlet.m-portlet--creative .m-portlet__head .m-portlet__head-caption .m-portlet__head-title .m-portlet__head-text {font-size: 1rem;font-weight: 400;font-family: Poppins}
+.m-portlet.m-portlet--creative .m-portlet__head .m-portlet__head-caption .m-portlet__head-title .m-portlet__head-text {font-size: 1rem;font-weight: 400;font-family: Roboto}
 
 .m-portlet.m-portlet--creative .m-portlet__head .m-portlet__head-caption .m-portlet__head-title .m-portlet__head-text .m-portlet__head-desc {font-size: .8rem;font-weight: 300}
 
@@ -14145,7 +14145,7 @@ td > .m-checkbox.m-checkbox--single, th > .m-checkbox.m-checkbox--single {right:
 
 .jstree-default.jstree-rtl .jstree-last {background: 0 0;background-repeat: no-repeat}
 
-.vakata-context, .vakata-context ul {padding: 0;min-width: 125px;font-size: 1rem;font-family: Poppins;-webkit-border-radius: 4px;-moz-border-radius: 4px;-ms-border-radius: 4px;-o-border-radius: 4px;border-radius: 4px}
+.vakata-context, .vakata-context ul {padding: 0;min-width: 125px;font-size: 1rem;font-family: Roboto;-webkit-border-radius: 4px;-moz-border-radius: 4px;-ms-border-radius: 4px;-o-border-radius: 4px;border-radius: 4px}
 
 .vakata-context li, .vakata-context ul li {border: 0}
 

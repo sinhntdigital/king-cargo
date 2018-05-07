@@ -45,10 +45,6 @@
             overflow: hidden;
         }
 
-        .m-datatable__table td, .m-datatable__table th {
-            border: solid 1px silver;
-        }
-
         .form-control {
             border: solid 1px silver !important;
         }
@@ -162,11 +158,11 @@
                         </a>
                     </li>
                     <li class="m-menu__item" aria-haspopup="true">
-                        <a href="{{ route('resource.index') }}" class="m-menu__link">
+                        <a href="{{ route('employee.index') }}" class="m-menu__link">
                             <i class="m-menu__link-icon flaticon-squares-4"></i>
                             <span class="m-menu__link-title">
                                 <span class="m-menu__link-wrap">
-                                    <span class="m-menu__link-text">Resource</span>
+                                    <span class="m-menu__link-text">Employee</span>
                                 </span>
                             </span>
                         </a>
@@ -177,36 +173,6 @@
                             <span class="m-menu__link-title">
                                 <span class="m-menu__link-wrap">
                                     <span class="m-menu__link-text">user management</span>
-                                </span>
-                            </span>
-                        </a>
-                    </li>
-                    <li class="m-menu__item" aria-haspopup="true">
-                        <a href="{{ route('changeLanguage', 'en') }}" class="m-menu__link">
-                            <i class="m-menu__link-icon fas fa-user"></i>
-                            <span class="m-menu__link-title">
-                                <span class="m-menu__link-wrap">
-                                    <span class="m-menu__link-text">EN</span>
-                                </span>
-                            </span>
-                        </a>
-                    </li>
-                    <li class="m-menu__item" aria-haspopup="true">
-                        <a href="{{ route('changeLanguage', 'vi') }}" class="m-menu__link">
-                            <i class="m-menu__link-icon fas fa-user"></i>
-                            <span class="m-menu__link-title">
-                                <span class="m-menu__link-wrap">
-                                    <span class="m-menu__link-text">VI</span>
-                                </span>
-                            </span>
-                        </a>
-                    </li>
-                    <li class="m-menu__item" aria-haspopup="true">
-                        <a href="{{ route('changeLanguage', 'jp') }}" class="m-menu__link">
-                            <i class="m-menu__link-icon fas fa-user"></i>
-                            <span class="m-menu__link-title">
-                                <span class="m-menu__link-wrap">
-                                    <span class="m-menu__link-text">JP</span>
                                 </span>
                             </span>
                         </a>
