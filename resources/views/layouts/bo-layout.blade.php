@@ -104,9 +104,9 @@
                                 <li data-dropdown-toggle="click" class="m-nav__item m-topbar__user-profile m-topbar__user-profile--img m-dropdown m-dropdown--medium m-dropdown--arrow m-dropdown--header-bg-fill m-dropdown--align-right m-dropdown--mobile-full-width m-dropdown--skin-light" aria-expanded="true">
                                     <a href="#" class="m-nav__link m-dropdown__toggle m--font-brand">
                                         <div class="m-topbar__userpic">
-                                            <i class="fa fa-user-circle-o" style="font-size:3rem" aria-hidden="true"></i>
+                                            <i class="fa fa-user-circle" style="font-size:3rem" aria-hidden="true"></i>
                                         </div>
-                                        <span class="m-topbar__username m--hide">admin@email.com</span>
+                                        <span class="m-topbar__username m--hide">admin@gmail.com</span>
                                     </a>
                                     <div class="m-dropdown__wrapper"><span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust" style="left: auto; right: 12.5px;"></span>
                                         <div class="m-dropdown__inner">
@@ -116,9 +116,9 @@
                                                         <img src="{{ asset('backend/img/users/user-none.jpg') }}" alt="" class="m--img-rounded m--marginless">
                                                     </div>
                                                     <div class="m-card-user__details">
-                                                        <span class="m-card-user__name m--font-weight-500">Admin</span>
+                                                        <span class="m-card-user__name m--font-weight-500">Gấu mập</span>
                                                         <a class="m-card-user__email m--font-weight-300 m-link" style="color:white">
-                                                            <i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;admin@email.com
+                                                            <i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;admin@gmail.com
                                                         </a>
                                                     </div>
                                                 </div>
@@ -126,16 +126,6 @@
                                             <div class="m-dropdown__body">
                                                 <div class="m-dropdown__content">
                                                     <ul class="m-nav m-nav--skin-light">
-                                                        {{--<li class="m-nav__item">--}}
-                                                        {{--<a href="{{ route('gmGetViewProfile') }}" class="m-nav__link">--}}
-                                                        {{--<i class="m-nav__link-icon flaticon-profile"></i> <span class="m-nav__link-text">{{ __('Account Settings') }}</span>--}}
-                                                        {{--</a>--}}
-                                                        {{--</li>--}}
-                                                        {{--<li class="m-nav__item">--}}
-                                                        {{--<a href="{{ route('gmGetChangePassword') }}" class="m-nav__link">--}}
-                                                        {{--<i class="m-nav__link-icon flaticon-share"></i> <span class="m-nav__link-text">{{ __('Change password') }}</span>--}}
-                                                        {{--</a>--}}
-                                                        {{--</li>--}}
                                                         <li class="m-nav__item">
                                                             <a href="{{ route('gmGetLogout') }}" class="m-nav__link">
                                                                 <i class="m-nav__link-icon flaticon-logout"></i> <span class="m-nav__link-text">{{ __('Logout') }}</span>
@@ -221,34 +211,6 @@
                             </span>
                         </a>
                     </li>
-                    {{--<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true">--}}
-                    {{--<a href="javascript:;" class="m-menu__link m-menu__toggle">--}}
-                    {{--<i class="m-menu__link-icon flaticon-user-settings"></i>--}}
-                    {{--<span class="m-menu__link-title">--}}
-                    {{--<span class="m-menu__link-wrap">--}}
-                    {{--<span class="m-menu__link-text">{{ __('Settings') }}</span>--}}
-                    {{--</span>--}}
-                    {{--</span>--}}
-                    {{--<i class="m-menu__ver-arrow la la-angle-right"></i>--}}
-                    {{--</a>--}}
-                    {{--<div class="m-menu__submenu">--}}
-                    {{--<span class="m-menu__arrow"></span>--}}
-                    {{--<ul class="m-menu__subnav">--}}
-                    {{--<li class="m-menu__item  m-menu__item--active" aria-haspopup="true">--}}
-                    {{--<a href="{{ route('gmGetViewProfile') }}" class="m-menu__link ">--}}
-                    {{--<i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i>--}}
-                    {{--<span class="m-menu__link-text">{{ __('Profile') }}</span>--}}
-                    {{--</a>--}}
-                    {{--</li>--}}
-                    {{--<li class="m-menu__item  m-menu__item--active" aria-haspopup="true">--}}
-                    {{--<a href="{{ route('gmGetChangePassword') }}" class="m-menu__link ">--}}
-                    {{--<i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i>--}}
-                    {{--<span class="m-menu__link-text">{{ __('Change password') }}</span>--}}
-                    {{--</a>--}}
-                    {{--</li>--}}
-                    {{--</ul>--}}
-                    {{--</div>--}}
-                    {{--</li>--}}
                 </ul>
             </div>
         </div>

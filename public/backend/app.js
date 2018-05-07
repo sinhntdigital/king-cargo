@@ -7,39 +7,39 @@ $(document).ready(function () {
     });
 });
 
-tinymce.init({
-    selector                 : 'textarea.gm-input__textarea--tinyeditor',
-    themes                   : 'modern',
-    height                   : 300,
-    image_advtab             : true,
-    plugins                  : [
-        'advlist autolink lists link image charmap print preview hr anchor pagebreak',
-        'searchreplace wordcount visualblocks visualchars code fullscreen',
-        'insertdatetime media nonbreaking save table contextmenu directionality',
-        'emoticons template paste textcolor colorpicker textpattern responsivefilemanager',
-    ],
-    toolbar1                 : 'bold italic underline | alignleft aligncenter alignright alignjustify | styleselect | fontselect |  fontsizeselect',
-    // toolbar2: "undo redo | responsivefilemanager | bullist numlist outdent indent | link unlink anchor | image media | forecolor backcolor  | print preview code ",
-    toolbar2                 : 'undo redo | responsivefilemanager | bullist numlist outdent indent | link unlink anchor | forecolor backcolor  | print preview code ',
-    fontsize_formats         : '8pt 10pt 12pt 14pt 18pt 24pt 36pt',
-    external_plugins         : {'filemanager': '/public/plugins/filemanager/plugin.min.js'},
-    external_filemanager_path: '/public/plugins/filemanager/',
-    filemanager_title        : 'File Manager',
-    // filemanager_access_key: file_manager_key
-    setup                    : function (editor) {
-        editor.on('change', function () {
-            tinymce.triggerSave();
-        });
-    }
-});
+// tinymce.init({
+//     selector                 : 'textarea.gm-input__textarea--tinyeditor',
+//     themes                   : 'modern',
+//     height                   : 300,
+//     image_advtab             : true,
+//     plugins                  : [
+//         'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+//         'searchreplace wordcount visualblocks visualchars code fullscreen',
+//         'insertdatetime media nonbreaking save table contextmenu directionality',
+//         'emoticons template paste textcolor colorpicker textpattern responsivefilemanager',
+//     ],
+//     toolbar1                 : 'bold italic underline | alignleft aligncenter alignright alignjustify | styleselect | fontselect |  fontsizeselect',
+//     // toolbar2: "undo redo | responsivefilemanager | bullist numlist outdent indent | link unlink anchor | image media | forecolor backcolor  | print preview code ",
+//     toolbar2                 : 'undo redo | responsivefilemanager | bullist numlist outdent indent | link unlink anchor | forecolor backcolor  | print preview code ',
+//     fontsize_formats         : '8pt 10pt 12pt 14pt 18pt 24pt 36pt',
+//     external_plugins         : {'filemanager': '/public/plugins/filemanager/plugin.min.js'},
+//     external_filemanager_path: '/public/plugins/filemanager/',
+//     filemanager_title        : 'File Manager',
+//     // filemanager_access_key: file_manager_key
+//     setup                    : function (editor) {
+//         editor.on('change', function () {
+//             tinymce.triggerSave();
+//         });
+//     }
+// });
 
-$('.resfile-btn').fancybox({
-    'width'    : 900,
-    'height'   : 450,
-    'type'     : 'iframe',
-    'autoScale': false,
-    'autoSize' : false,
-});
+// $('.resfile-btn').fancybox({
+//     'width'    : 900,
+//     'height'   : 450,
+//     'type'     : 'iframe',
+//     'autoScale': false,
+//     'autoSize' : false,
+// });
 
 $('.gm-input--date').datepicker({
     format     : 'dd/mm/yyyy',
