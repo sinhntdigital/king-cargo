@@ -133,7 +133,14 @@ $(document).ready(function () {
         maxViewMode: 'centuries',
         minViewMode: 'days',
         autoclose  : true,
-    });
+    }).on('changeDate', function(e){
+        let date = $(this).datepicker('getDate');
+        let month = date.getMonth() + 1;
+        let day = date.getDate();
+        let year = date.getFullYear();
+        let formattedDate = year + '/' + month + '/' + day + ' 00:00:00';
+        $(this).siblings($(this).data('input')).val(formattedDate);
+    });;
 
     tinymce.init({
         selector                 : 'textarea.gm-input__textarea--tinyeditor',
@@ -171,7 +178,7 @@ $(document).on('click', '.gm-js__btn--remove-image', function () {
 
 function responsive_filemanager_callback(field_id) {
     parent.$.fancybox.close();
-    var url = $('#' + field_id).val();
+    let url = $('#' + field_id).val();
     $('.gm-input__' + field_id).val(url);
     $('.gm-image__' + field_id).attr('src', url).show();
     $('.gm-js__btn--remove-image-' + field_id).fadeIn(300);
@@ -192,6 +199,6 @@ function showMessage(e, i, a) {
 }
 
 function formatDateFromServer(string) {
-    if (!!string) return moment($string, dateTimeServerFormat).format(dateLocalFormat);
+    if (!!string) return moment(string, dateTimeServerFormat).format(dateLocalFormat);
     else return 'Not updated';
 }

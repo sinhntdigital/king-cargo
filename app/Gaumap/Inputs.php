@@ -25,7 +25,8 @@
         public static function date($name, $label = null, $default = null) {
             $rs = "<div class='form-group m-form__group'>";
             if(!!$label) $rs .= "<label class='form-control-label' for='gm-input--$name'>$label</label>";
-            $rs .= "<input class='form-control gm-css--input_date gm-js--input_date gm-input--$name' name='$name' id='gm-input--$name' value='$default'/>";
+            $rs .= "<input class='form-control gm-css--input_date gm-js--input_date' value='$default' data-input='.gm-input--$name'/>";
+            $rs .= "<input type='hidden' class='gm-input--$name' name='$name' id='gm-input--$name'/>";
             $rs .= "<span class='form-control-feedback'></span>";
             $rs .= "</div>";
             return $rs;
