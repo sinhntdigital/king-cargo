@@ -25,7 +25,7 @@
                     </button>
                 </div>
             </div>
-            <div id="gm-datatable--resource"></div>
+            <div id="gm-datatable--employee"></div>
         </div>
     </div>
 
@@ -82,22 +82,22 @@
     </div>
 @endsection
 
-
 @section('scripts')
-    <script type="text/javascript">
-        const datatTable = $('#gm-datatable--resource');
-        const btnCreate = '.gm-btn--create_employee';
-        const btnSubmitCreate = '.gm-btn-submit--create_employee';
-        const modalCreate = $('#gm-modal--create_employee');
-        const formCreate = $('#gm-form--create_employee');
-        const btnEdit = '.gm-datatable--employee__btn-edit';
-        const btnSubmitEdit = '.gm-btn-submit--edit_employee';
-        const modalEdit = $('#gm-modal--edit_employee');
-        const formEdit = $('#gm-form--edit_employee');
-        const btnSubmitDelete = '.gm-btn-submit--delete_employee';
-        const searchField = $('#gm-input--datatable_search_field');
-        const routeIndex = '{{ route('employee.index') }}';
-        const rules = {
+    <script type="module">
+        import restFullScripts from '{{ asset('backend/restfull.js') }}';
+        restFullScripts.dataTable = $('#gm-datatable--employee');
+        restFullScripts.routeIndex = '{{ route('employee.index') }}';
+        restFullScripts.btnCreate = '.gm-btn--create_employee';
+        restFullScripts.btnSubmitCreate = '.gm-btn-submit--create_employee';
+        restFullScripts.modalCreate = $('#gm-modal--create_employee');
+        restFullScripts.formCreate = $('#gm-form--create_employee');
+        restFullScripts.btnEdit = '.gm-datatable--employee__btn-edit';
+        restFullScripts.btnSubmitEdit = '.gm-btn-submit--edit_employee';
+        restFullScripts.modalEdit = $('#gm-modal--edit_employee');
+        restFullScripts.formEdit = $('#gm-form--edit_employee');
+        restFullScripts.btnSubmitDelete = '.gm-btn-submit--delete_employee';
+        restFullScripts.searchField = $('#gm-input--datatable_search_field');
+        restFullScripts.rules = {
             full_name   : {
                 required: true,
             },
@@ -112,7 +112,7 @@
                 required: true,
             },
         };
-        const columns = [
+        restFullScripts.columns = [
             {
                 field   : 'id',
                 title   : '#',
@@ -159,20 +159,6 @@
                     return !!row.phone_number ? row.phone_number : '{{ __('Not updated') }}';
                 }
             },
-                {{--{--}}
-                {{--field   : "type",--}}
-                {{--title   : "Type",--}}
-                {{--width   : 80,--}}
-                {{--overflow: 'visible',--}}
-                {{--template: function (row) {--}}
-                {{--switch (row.type) {--}}
-                {{--case 'company':--}}
-                {{--return '<span class="m-badge m-badge--primary m-badge--dot"></span> <span class="m--font-bold m--font-primary"></span>';--}}
-                {{--default:--}}
-                {{--return '<span class="m-badge m-badge--success m-badge--dot"></span> <span class="m--font-bold m--font-success"></span>';--}}
-                {{--}--}}
-                {{--}--}}
-                {{--},--}}
             {
                 field   : "status",
                 title   : "Status",
@@ -197,13 +183,15 @@
                 template  : row => {
                     return '<span style="overflow: visible; width: 110px;">' +
                         '  <button class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill gm-datatable--employee__btn-edit" ' +
-                        '          data-url="' + routeIndex + '/' + row.id + '" data-id="' + row.id + '">' +
+                        '          data-url="{{ route('employee.index') }}/' + row.id + '" data-id="' + row.id + '">' +
                         '     <i class="la la-edit"></i>' +
                         '  </button>' +
                         '</span>';
                 }
             },
         ];
+        setTimeout(function () {
+            restFullScripts.gmInit();
+        }, 500);
     </script>
-    <script src="{{ asset('backend/restfull.js') }}"></script>
 @stop

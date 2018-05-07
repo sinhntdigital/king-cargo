@@ -213,9 +213,8 @@
 <script src="{{ asset("plugins/fancybox/jquery.fancybox.js") }}" type="text/javascript"></script>
 <script src="{{ asset("plugins/tinymce/tinymce.min.js") }}" type="text/javascript"></script>
 <script src="{{ asset("plugins/filemanager/plugin.min.js") }}" type="text/javascript"></script>
-<script src="//www.google.com/jsapi" type="text/javascript"></script>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js" type="text/javascript"></script>--}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/df-number-format/2.1.6/jquery.number.min.js"></script>
 <script src="{{ asset("backend/app.js") }}" type="text/javascript"></script>
