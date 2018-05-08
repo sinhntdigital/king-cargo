@@ -168,7 +168,7 @@
                         </a>
                     </li>
                     <li class="m-menu__item" aria-haspopup="true">
-                        <a href="/" class="m-menu__link">
+                        <a href={{route('user.index')}} class="m-menu__link">
                             <i class="m-menu__link-icon fas fa-user"></i>
                             <span class="m-menu__link-title">
                                 <span class="m-menu__link-wrap">

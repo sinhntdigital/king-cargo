@@ -10,8 +10,18 @@ class UserController extends Controller {
      * Display a listing of the resource.
      * @return \Illuminate\Http\Response
      */
-    public function index () {
-        //
+    public function index (Request $request) {
+        try {
+                if($request->wantsJson()) {
+                    $user = user::orderBy('created_at', 'DESC')->get();
+                    return response()->json(['data' => $user], 200);
+                } else {
+                    return view('backend.user.index');
+                }
+            } catch(\Exception $ex) {
+                if($request->wantsJson()) return response()->json(['error' => $ex->getMessage()], 200);
+                else abort(500);
+            }
     }
 
     /**
@@ -27,16 +37,21 @@ class UserController extends Controller {
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
+
     public function store (Request $request) {
-        try {
-            $input = $request->all();
-            $input['id'] = \Helpers::generateId();
-            $input['password'] = \Hash::make($input['password']);
-            $newUser = User::create($input);
-            dd($newUser);
-        } catch (\Exception $ex) {
-            abort(500);
-        }
+       try {
+                $input          = $request->all();
+                $input['id']    = \Helpers::generateId();
+                $input['password'] = \Hash::make($input['password']);
+                //                $input['creator_id'] = \Auth::user()->id;
+                $employee = User::create($input);
+                if(!empty($employee))
+                    return response()->json(['success' => __('New employee had been created.')], 200);
+                else
+                    return response()->json(['error' => 'System error, please contact administrator.'], 200);
+            } catch(\Exception $ex) {
+                return response()->json(['error' => $ex->getMessage()], 200);
+            }
     }
 
     /**
@@ -45,13 +60,13 @@ class UserController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function show ($id) {
-        try {
-            $user = User::find($id);
-            if(empty($user)) abort(404);
-            // Return view
-        } catch (\Exception $ex) {
-            abort(500);
-        }
+     try {
+                $user = User::find($id);
+                if(empty($user)) return response()->json(['error' => 'Cannot find employee'], 200);
+                return response()->json(['success' => $user], 200);
+            } catch(\Exception $ex) {
+                return response()->json(['error' => $ex->getMessage()], 200);
+            }
     }
 
     /**
@@ -70,14 +85,15 @@ class UserController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function update (Request $request, $id) {
-        try {
-            $user = User::find($id);
-            if(empty($user)) abort(404);
-            $input = $request->all();
-            $user->update($input);
-        } catch (\Exception $ex) {
-            abort(500);
-        }
+         try {
+                $employee = User::find($id);
+                if(empty($employee)) return response()->json(['error' => 'Cannot find employee'], 200);
+                $input = $request->all();
+                $employee->update($input);
+                return response()->json(['success' => ''], 200);
+            } catch (\Exception $ex) {
+                return response()->json(['error' => $ex->getMessage()], 200);
+            }
     }
 
     /**

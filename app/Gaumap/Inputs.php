@@ -12,6 +12,14 @@
             $rs .= "</div>";
             return $rs;
         }
+
+        public static function password($name, $label = null, $maxlength = 25) {
+            $rs = "<div class='form-group m-form__group'>";
+            if(!!$label) $rs .= "<label class='form-control-label' for='gm-input--$name'>$label</label>";
+            $rs .= "<input type='password' class='form-control m-input gm-css--input_text gm-js--input_text gm-input--$name' name='$name' maxlength='$maxlength' id='gm-input--$name'/>";
+            $rs .= "</div>";
+            return $rs;
+        }
     
         public static function email($name, $label = null) {
             $rs = "<div class='form-group m-form__group'>";
@@ -39,6 +47,32 @@
                         <option value='enable'>Enable</option>
                         <option value='disable'>Disable</option>
                    </select>";
+            $rs .= "<span class='form-control-feedback'></span>";
+            $rs .= "</div>";
+            return $rs;
+        }
+
+
+        public static function role($name, $label = null) {
+            $rs = "<div class='form-group m-form__group'>";
+            if(!!$label) $rs .= "<label class='form-control-label' for='gm-input--$name'>$label</label>";
+            $rs .= "<select class='form-control gm-css--input_select gm-css--input_select gm-input--$name' name='$name' id='gm-input--$name'>
+                        <option value='administrative'>admin</option>
+                        <option value='employees'>employees</option>
+                   </select>";
+            $rs .= "<span class='form-control-feedback'></span>";
+            $rs .= "</div>";
+            return $rs;
+        }
+
+        public static function resource_id($name, $label = null) {
+            $listRS = "";
+            foreach (\App\Models\Resource::all() as $resource) {
+                            $listRS = $listRS."<option value='".$resource->id."'>".$resource->full_name."</option>";                  
+                        }    
+            $rs = "<div class='form-group m-form__group'>";
+            if(!!$label) $rs .= "<label class='form-control-label' for='gm-input--$name'>$label</label>";
+            $rs .= "<select class='form-control gm-css--input_select gm-css--input_select gm-input--$name' name='$name' id='gm-input--$name'>".$listRS."</select>";
             $rs .= "<span class='form-control-feedback'></span>";
             $rs .= "</div>";
             return $rs;
